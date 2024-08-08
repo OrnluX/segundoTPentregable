@@ -33,6 +33,7 @@
         {
             $cadena = parent:: __toString();
             $cadena . "\n Número de viajero frecuente: " . $this->getNroViajeroFrecuente() . "\n Cantidad de millas: " . $this->getCantMillas(); 
+            return $cadena;
         }
     }
 ?>
