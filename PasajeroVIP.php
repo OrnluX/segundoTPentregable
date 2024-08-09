@@ -4,6 +4,7 @@
         private $nroViajeroFrecuente;
         private $cantMillas;
 
+        //CONSTRUCTOR
         public function __construct(string $nombre, string $apellido, int $nroDocumento, int $nroTelefono, int $nroTicket, int $nroAsiento, int $nroViajeroFrecuente, float $cantMillas)
         {
             parent::__construct($nombre, $apellido, $nroDocumento, $nroTelefono, $nroTicket, $nroAsiento);

@@ -5,6 +5,7 @@
         private $reqAsistencia;
         private $reqComidasEspeciales;
 
+        //CONSTRUCTOR
         public function __construct(string $nombre, string $apellido, int $nroDocumento, int $nroTelefono, int $nroTicket, int $nroAsiento, bool $reqSillaDeruedas, bool $reqAsistencia, bool $reqComidasEspeciales)
         {   
             parent::__construct($nombre, $apellido, $nroDocumento, $nroTelefono, $nroTicket, $nroAsiento);
