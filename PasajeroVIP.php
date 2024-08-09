@@ -1,12 +1,12 @@
 <?php
-    include_once 'Pasajeros.php';
-    class PasajeroVIP extends Pasajeros {
+    include_once 'Pasajero.php';
+    class PasajeroVIP extends Pasajero {
         private $nroViajeroFrecuente;
         private $cantMillas;
 
-        public function __construct(string $nombre, int $nroTicket, int $nroAsiento, int $nroViajeroFrecuente, float $cantMillas)
+        public function __construct(string $nombre, string $apellido, int $nroDocumento, int $nroTelefono, int $nroTicket, int $nroAsiento, int $nroViajeroFrecuente, float $cantMillas)
         {
-            parent::__construct($nombre, $nroTicket, $nroAsiento);
+            parent::__construct($nombre, $apellido, $nroDocumento, $nroTelefono, $nroTicket, $nroAsiento);
             $this->nroViajeroFrecuente = $nroViajeroFrecuente;
             $this->cantMillas = $cantMillas;
         }

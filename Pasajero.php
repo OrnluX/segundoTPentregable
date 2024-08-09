@@ -13,15 +13,21 @@
 
      */
 
-    class Pasajeros {
+    class Pasajero {
         private $nombre;
+        private $apellido;
+        private $nroDocumento;
+        private $nroTelefono;
         private $nroTicket;
         private $nroAsiento;
 
         //CONSTRUCTOR
-        public function __construct(string $nombre, int $nroTicket, int $nroAsiento) 
+        public function __construct(string $nombre, string $apellido, string $nroDocumento, string $nroTelefono, int $nroTicket, int $nroAsiento) 
         {
             $this->nombre = $nombre;
+            $this->apellido = $apellido;
+            $this->nroDocumento = $nroDocumento;
+            $this->nroTelefono = $nroTelefono;
             $this->nroTicket = $nroTicket;
             $this->nroAsiento = $nroAsiento;
         }
@@ -29,6 +35,18 @@
         //GETTERS
         public function getNombre() {
             return $this->nombre;
+        }
+
+        public function getApellido() {
+            return $this->apellido;
+        }
+
+        public function getNroDocumento() {
+            return $this->nroDocumento;
+        }
+
+        public function getNroTelefono() {
+            return $this->nroTelefono;
         }
 
         public function getNroTicket() {
@@ -44,6 +62,18 @@
             $this->nombre = $nombre;
         }
 
+        public function setApellido($apellido) {
+            $this->apellido = $apellido;
+        }
+
+        public function setNroDocumento($nroDocumento) {
+            $this->nroDocumento = $nroDocumento;
+        }
+
+        public function setNroTelefono($nroTelefono) {
+            $this->nroTelefono = $nroTelefono;
+        }
+
         public function setNroTicket($nroTicket) {
             $this->nroTicket = $nroTicket;
         }
@@ -56,6 +86,9 @@
         public function __toString()
         {
             return "Nombre: " . $this->getNombre() . 
+            "\n Apellido: " . $this->getApellido() .
+            "\n Nro Documento: " . $this->getNroDocumento() .
+            "\n Nro Teléfono: " . $this->getNroTelefono() .
             "\n Ticket nro: " . $this->getNroTicket() .
             "\n Asiento Nro: " . $this->getNroAsiento(); 
         }

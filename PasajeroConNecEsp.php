@@ -1,13 +1,13 @@
 <?php
-    include_once'Pasajeros.php';
-    class PasajeroConNecEsp extends Pasajeros {
+    include_once 'Pasajero.php';
+    class PasajeroConNecEsp extends Pasajero {
         private $reqSillaDeruedas;
         private $reqAsistencia;
         private $reqComidasEspeciales;
 
-        public function __construct(string $nombre, int $nroTicket, int $nroAsiento, bool $reqSillaDeruedas, bool $reqAsistencia, bool $reqComidasEspeciales)
+        public function __construct(string $nombre, string $apellido, int $nroDocumento, int $nroTelefono, int $nroTicket, int $nroAsiento, bool $reqSillaDeruedas, bool $reqAsistencia, bool $reqComidasEspeciales)
         {   
-            parent::__construct($nombre, $nroTicket, $nroAsiento);
+            parent::__construct($nombre, $apellido, $nroDocumento, $nroTelefono, $nroTicket, $nroAsiento);
             $this->reqSillaDeruedas = $reqSillaDeruedas;
             $this->reqAsistencia = $reqAsistencia;
             $this->reqComidasEspeciales = $reqComidasEspeciales;
